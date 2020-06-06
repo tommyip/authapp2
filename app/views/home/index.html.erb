@@ -13,7 +13,10 @@
 <div id="api-result"></div>
 
 <script>
-const fetch_opts = { credentials: 'omit' };  // omit | same-origin | include
+const fetch_opts = {
+    credentials: 'omit', // omit | same-origin | include
+    headers: JSON.parse(localStorage.getItem('auth'))
+};
 function handleClick() {
     const div = document.getElementById('api-result');
     fetch('http://localhost:3000/api/items', fetch_opts)
