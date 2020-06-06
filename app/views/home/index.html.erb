@@ -8,3 +8,16 @@
     <%= link_to "Login", new_user_session_path %>
     <%= link_to "Sign Up", new_user_registration_path %>
 <% end %>
+
+<button onclick="handleClick()">Call API</button>
+<div id="api-result"></div>
+
+<script>
+const fetch_opts = { credentials: 'omit' };  // omit | same-origin | include
+function handleClick() {
+    const div = document.getElementById('api-result');
+    fetch('http://localhost:3000/api/items', fetch_opts)
+        .then(resp => resp.json())
+        .then(content => { div.innerText = JSON.stringify(content); });
+}
+</script>
