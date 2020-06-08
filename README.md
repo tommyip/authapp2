@@ -1,24 +1,7 @@
-# README
+# Devise + devise_token_auth
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Files to look at:
+* [`/app/controllers/application_controller.rb`](/app/controllers/application_controller.rb)
+* [`/app/controllers/api/application_controller.rb`](/app/controllers/api/application_controller.rb)
+* [`/app/views/home/index.html.erb`](/app/views/home/index.html.erb)
+* [`/app/views/devise/sessions/new.html.erb`](/app/views/devise/sessions/new.html.erb)
